@@ -112,7 +112,7 @@ Clone this repository to your desired folder:
   git clone git@github.com:mutonic/Capstone_conferencePage.git
 ```
 
-### Usage
+### Usage 
 
 To run the project, execute the index.html
 
