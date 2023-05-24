@@ -80,7 +80,7 @@ Describe the tech stack and include only the relevant sections that apply to you
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Not yet Deployed
+[Live Link](https://mutonic.github.io/Capstone_conferencePage/)
 
 <!-- [Live Demo Link](https://google.com)-->
 
