@@ -112,7 +112,7 @@ Clone this repository to your desired folder:
   git clone git@github.com:mutonic/Capstone_conferencePage.git
 ```
 
-### Usage
+### Usage 
 
 To run the project, execute the index.html
 
@@ -196,7 +196,9 @@ Remember, every contribution, no matter how big or small, makes a difference. We
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to express my sincere gratitude to Microverse, our dedicated reviewers, and our esteemed partners. Your unwavering support, invaluable feedback, and collaborative efforts have played a pivotal role in making my journey a resounding success. I am truly grateful for your contributions and look forward to continuing our fruitful collaboration. Thank you for being an integral part of my achievements 
+I would like to express my sincere gratitude to Microverse, our dedicated reviewers, and our esteemed partners. Your unwavering support, invaluable feedback, and collaborative efforts have played a pivotal role in making my journey a resounding success. I am truly grateful for your contributions and look forward to continuing our fruitful collaboration. Thank you for being an integral part of my achievements.
+
+I would like to express my sincere gratitude to <a href="https://www.behance.net/adagio07"> Cindy Shinw</a>, the author of the <a href='https://www.behance.net/gallery/29845175/CC-Global-Summit-2015'> design </a> that I have utilized.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
