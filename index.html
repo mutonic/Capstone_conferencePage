@@ -46,12 +46,12 @@
         /></a>
       </div>
       <ul class="navbar-links">
-        <a href=""><li class="nav-link">About</li></a>
-        <a href=""><li class="nav-link">Program</li></a>
-        <a href=""><li class="nav-link">Join</li></a>
-        <a href=""><li class="nav-link">Sponsor</li></a>
-        <a href=""><li class="nav-link">News</li></a>
-        <a href=""><li class="nav-link camp-link">CC Campaign</li></a>
+        <a href="#about"><li class="nav-link" >About</li></a>
+        <a href="#program"><li class="nav-link" >Program</li></a>
+        <a href="#join"><li class="nav-link" >Join</li></a>
+        <a href="#sponsor"><li class="nav-link" >Sponsor</li></a>
+        <a href="#news"><li class="nav-link" >News</li></a>
+        <a href="#campaign"><li class="nav-link camp-link">CC Campaign</li></a>
       </ul>
     </nav>
     <!-----------------------Main Content------------------->
@@ -64,14 +64,14 @@
           <button class="close-menu" id="hamburger">
             <span class="material-symbols-outlined"> close </span>
           </button>
-          <a href="">About</a>
-        <a href="">Program</a>
-        <a href="">Join</a>
-        <a href="">Sponsor</a>
-        <a href="">News</a>
-        <a href="">CC Campaign</a>
+          <a href="#about">About</a>
+        <a href="#program">Program</a>
+        <a href="#join">Join</a>
+        <a href="#sponsor">Sponsor</a>
+        <a href="#news">News</a>
+        <a href="#campaign">CC Campaign</a>
         </nav>
-        <div class="hero">
+        <div class="hero" id="about">
           <div class="hero-title">
             <h2>"Hello! Sharing World"</h2>
             <h1>Creative commons global summit 2023</h1>
@@ -90,7 +90,7 @@
           </div>
         </div>
       </section>
-      <section class="main-program">
+      <section class="main-program" id="program">
         <div class="main-title">
           <h2>Main Program</h2>
         </div>
@@ -155,7 +155,7 @@
           </article>
         </div>
 
-        <div class="join-btn">
+        <div class="join-btn" id="join">
           <button>Join Insight Summit 2023</button>
         </div>
         <div class="more-program">
@@ -168,9 +168,12 @@
           <span class="material-symbols-outlined"> horizontal_rule </span>
         </div>
         <div class="speakers" id="speakers"></div>
-        <button id="showMoreButton">Show More</button>
+        <button id="showMoreButton">
+          More
+          <img src="./assets/images/arrow_down.png" alt=""> 
+        </button>
       </section>
-      <section class="partner">
+      <section class="partner" id="sponsor">
         <div class="partner-title">
           <h4>Partner</h4>
         </div>
@@ -191,7 +194,7 @@
         </div>
         <div class="footer-text">
           <p>
-            <span id="currentYear"></span> Data insight.© Some Rights Reserved
+            <span id="currentYear"></span> Data insight. Some Rights Reserved
           </p>
           <p></p>
         </div>

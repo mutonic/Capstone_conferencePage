@@ -1,40 +1,40 @@
 const speakersData = [
   {
-    imageSrc: "./assets/images/speaker_01.png",
-    name: "Yochai Benkler",
-    position: "Senior Data Scientist at JPM Corporation",
-    description: "Leads advanced analytics development, identifies patterns, and provides insights for data-driven decision making."
+    imageSrc: './assets/images/speaker_01.png',
+    name: 'Yochai Benkler',
+    position: 'Senior Data Scientist at JPM Corporation',
+    description: 'Leads advanced analytics development, identifies patterns, and provides insights for data-driven decision making.',
   },
   {
-    imageSrc: "./assets/images/speaker_02.png",
-    name: "Yochai Benkler",
-    position: "Data Science Manager at ABC Company",
-    description: "Oversees data scientists, guides ML model development, and ensures accurate analytical outputs."
+    imageSrc: './assets/images/speaker_02.png',
+    name: 'Yochai Benkler',
+    position: 'Data Science Manager at ABC Company',
+    description: 'Oversees data scientists, guides ML model development, and ensures accurate analytical outputs.',
   },
   {
-    imageSrc: "./assets/images/speaker_03.png",
-    name: "Yochai Benkler",
-    position: "Research Scientist in Data Mining at XYZ Research Institute",
-    description: "Conducts cutting-edge data mining research and develops innovative algorithms for valuable insights."
+    imageSrc: './assets/images/speaker_03.png',
+    name: 'Yochai Benkler',
+    position: 'Research Scientist in Data Mining at XYZ Research Institute',
+    description: 'Conducts cutting-edge data mining research and develops innovative algorithms for valuable insights.',
   },
   {
-    imageSrc: "./assets/images/speaker_04.png",
-    name: "Yochai Benkler",
-    position: "Data Engineer at DEF Tech Solutions",
-    description: "Designs and maintains data infrastructure, builds scalable pipelines, and ensures data quality."
+    imageSrc: './assets/images/speaker_04.png',
+    name: 'Yochai Benkler',
+    position: 'Data Engineer at DEF Tech Solutions',
+    description: 'Designs and maintains data infrastructure, builds scalable pipelines, and ensures data quality.',
   },
   {
-    imageSrc: "./assets/images/speaker_05.png",
-    name: "Yochai Benkler",
-    position: "Machine Learning Engineer at PQR Analytics",
-    description: "Designs and implements ML models, preprocesses data, and evaluates model performance."
+    imageSrc: './assets/images/speaker_05.png',
+    name: 'Yochai Benkler',
+    position: 'Machine Learning Engineer at PQR Analytics',
+    description: 'Designs and implements ML models, preprocesses data, and evaluates model performance.',
   },
   {
-    imageSrc: "./assets/images/speaker_06.png",
-    name: "Yochai Benkler",
-    position: "Data Scientist in Renewable Energy Research",
-    description: "Analyzes energy consumption data, performs predictive modeling, and optimizes energy generation and storage."
-  }
+    imageSrc: './assets/images/speaker_06.png',
+    name: 'Yochai Benkler',
+    position: 'Data Scientist in Renewable Energy Research',
+    description: 'Analyzes energy consumption data, performs predictive modeling, and optimizes energy generation and storage.',
+  },
 ];
 
 function generateSpeakerHTML(speaker) {
@@ -54,64 +54,64 @@ function generateSpeakerHTML(speaker) {
 }
 
 function displaySpeakers() {
-  const speakersContainer = document.querySelector(".speakers");
-  const partnerSection = document.querySelector(".partner");
-  const footer = document.querySelector("footer");
-  const showMoreButton = document.getElementById("showMoreButton");
+  const speakersContainer = document.querySelector('.speakers');
+  const partnerSection = document.querySelector('.partner');
+  const footer = document.querySelector('footer');
+  const showMoreButton = document.getElementById('showMoreButton');
   const isMobile = window.innerWidth < 768;
 
-  let speakersHTML = "";
+  let speakersHTML = '';
 
   if (isMobile) {
-    for (let i = 0; i < Math.min(2, speakersData.length); i++) {
+    for (let i = 0; i < Math.min(2, speakersData.length); i += 1) {
       speakersHTML += generateSpeakerHTML(speakersData[i]);
     }
 
     if (speakersData.length > 2) {
-      showMoreButton.style.display = "inline-block";
+      showMoreButton.style.display = 'inline-block';
     } else {
-      showMoreButton.style.display = "none";
+      showMoreButton.style.display = 'none';
     }
 
-    partnerSection.style.display = "none";
-    footer.style.display = "none";
+    partnerSection.style.display = 'none';
+    footer.style.display = 'none';
   } else {
-    for (let i = 0; i < speakersData.length; i++) {
+    for (let i = 0; i < speakersData.length; i += 1) {
       speakersHTML += generateSpeakerHTML(speakersData[i]);
     }
 
-    showMoreButton.style.display = "none";
-    partnerSection.style.display = "flex";
-    footer.style.display = "flex";
+    showMoreButton.style.display = 'none';
+    partnerSection.style.display = 'flex';
+    footer.style.display = 'flex';
   }
 
   speakersContainer.innerHTML = speakersHTML;
 }
 
 function showAllSpeakers() {
-  const speakersContainer = document.querySelector(".speakers");
-  const partnerSection = document.querySelector(".partner");
-  const footer = document.querySelector("footer");
-  const showMoreButton = document.getElementById("showMoreButton");
+  const speakersContainer = document.querySelector('.speakers');
+  const partnerSection = document.querySelector('.partner');
+  const footer = document.querySelector('footer');
+  const showMoreButton = document.getElementById('showMoreButton');
 
-  let speakersHTML = "";
+  let speakersHTML = '';
 
-  for (let i = 0; i < speakersData.length; i++) {
+  for (let i = 0; i < speakersData.length; i += 1) {
     speakersHTML += generateSpeakerHTML(speakersData[i]);
   }
 
   speakersContainer.innerHTML = speakersHTML;
-  showMoreButton.style.display = "none";
-  partnerSection.style.display = "flex";
-  footer.style.display = "flex";
+  showMoreButton.style.display = 'none';
+  partnerSection.style.display = 'flex';
+  footer.style.display = 'flex';
 }
 
-window.addEventListener("resize", displaySpeakers);
+window.addEventListener('resize', displaySpeakers);
 displaySpeakers();
 
-const showMoreButton = document.getElementById("showMoreButton");
-showMoreButton.addEventListener("click", showAllSpeakers);
+const showMoreButton = document.getElementById('showMoreButton');
+showMoreButton.addEventListener('click', showAllSpeakers);
 // dynamic year in the footer
-const currentYearElement = document.getElementById("currentYear");
+const currentYearElement = document.getElementById('currentYear');
 const currentYear = new Date().getFullYear();
 currentYearElement.textContent = currentYear;
