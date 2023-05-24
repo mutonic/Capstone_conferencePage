@@ -1,79 +1,117 @@
 const speakersData = [
   {
+    imageSrc: "./assets/images/speaker_01.png",
     name: "Yochai Benkler",
-    position: "Berkman Professor of Entrepreneurial Legal studies at Harvard Law School",
-    description: "Benkler studies commons-based peer production and published his seminal book 'The Wealth of Networks' in 2009. He is the co-director of the Berkman Klein Center for Internet and Society at Harvard University.",
-    image: "./assets/images/speaker_01.png"
+    position: "Senior Data Scientist at JPM Corporation",
+    description: "Leads advanced analytics development, identifies patterns, and provides insights for data-driven decision making."
   },
   {
+    imageSrc: "./assets/images/speaker_02.png",
     name: "Yochai Benkler",
-    position: "Berkman Professor of Entrepreneurial Legal studies at Harvard Law School",
-    description: "Benkler studies commons-based peer production and published his seminal book 'The Wealth of Networks' in 2009. He is the co-director of the Berkman Klein Center for Internet and Society at Harvard University.",
-    image: "./assets/images/speaker_02.png"
+    position: "Data Science Manager at ABC Company",
+    description: "Oversees data scientists, guides ML model development, and ensures accurate analytical outputs."
   },
   {
+    imageSrc: "./assets/images/speaker_03.png",
     name: "Yochai Benkler",
-    position: "Berkman Professor of Entrepreneurial Legal studies at Harvard Law School",
-    description: "Benkler studies commons-based peer production and published his seminal book 'The Wealth of Networks' in 2009. He is the co-director of the Berkman Klein Center for Internet and Society at Harvard University.",
-    image: "./assets/images/speaker_03.png"
+    position: "Research Scientist in Data Mining at XYZ Research Institute",
+    description: "Conducts cutting-edge data mining research and develops innovative algorithms for valuable insights."
+  },
+  {
+    imageSrc: "./assets/images/speaker_04.png",
+    name: "Yochai Benkler",
+    position: "Data Engineer at DEF Tech Solutions",
+    description: "Designs and maintains data infrastructure, builds scalable pipelines, and ensures data quality."
+  },
+  {
+    imageSrc: "./assets/images/speaker_05.png",
+    name: "Yochai Benkler",
+    position: "Machine Learning Engineer at PQR Analytics",
+    description: "Designs and implements ML models, preprocesses data, and evaluates model performance."
+  },
+  {
+    imageSrc: "./assets/images/speaker_06.png",
+    name: "Yochai Benkler",
+    position: "Data Scientist in Renewable Energy Research",
+    description: "Analyzes energy consumption data, performs predictive modeling, and optimizes energy generation and storage."
   }
 ];
 
-const speakersContainer = document.getElementById("speakers");
-const showMoreButton = document.getElementById("showMoreButton");
-const initialVisibleSpeakers = window.innerWidth >= 768 ? speakersData.length : 2;
-let visibleSpeakers = initialVisibleSpeakers;
+function generateSpeakerHTML(speaker) {
+  return `
+    <div class="speaker">
+      <div class="speaker-image">
+        <img src="${speaker.imageSrc}" alt="" />
+      </div>
+      <div class="speaker-info">
+        <h3>${speaker.name}</h3>
+        <p class="speaker-position">${speaker.position}</p>
+        <br />
+        <p class="speaker-description">${speaker.description}</p>
+      </div>
+    </div>
+  `;
+}
 
-function renderSpeakers() {
-  speakersContainer.innerHTML = ""; // Clear previous content
+function displaySpeakers() {
+  const speakersContainer = document.querySelector(".speakers");
+  const partnerSection = document.querySelector(".partner");
+  const footer = document.querySelector("footer");
+  const showMoreButton = document.getElementById("showMoreButton");
+  const isMobile = window.innerWidth < 768;
 
-  for (let i = 0; i < visibleSpeakers; i++) {
-    const speaker = speakersData[i];
+  let speakersHTML = "";
 
-    const speakerElement = document.createElement("div");
-    speakerElement.className = "speaker";
+  if (isMobile) {
+    for (let i = 0; i < Math.min(2, speakersData.length); i++) {
+      speakersHTML += generateSpeakerHTML(speakersData[i]);
+    }
 
-    const speakerImage = document.createElement("div");
-    speakerImage.className = "speaker-image";
-    const image = document.createElement("img");
-    image.src = speaker.image;
-    image.alt = "";
-    speakerImage.appendChild(image);
+    if (speakersData.length > 2) {
+      showMoreButton.style.display = "inline-block";
+    } else {
+      showMoreButton.style.display = "none";
+    }
 
-    const speakerInfo = document.createElement("div");
-    speakerInfo.className = "speaker-info";
+    partnerSection.style.display = "none";
+    footer.style.display = "none";
+  } else {
+    for (let i = 0; i < speakersData.length; i++) {
+      speakersHTML += generateSpeakerHTML(speakersData[i]);
+    }
 
-    const speakerName = document.createElement("h3");
-    speakerName.textContent = speaker.name;
-
-    const speakerPosition = document.createElement("p");
-    speakerPosition.className = "speaker-position";
-    speakerPosition.textContent = speaker.position;
-
-    const speakerDescription = document.createElement("p");
-    speakerDescription.className = "speaker-description";
-    speakerDescription.textContent = speaker.description;
-
-    speakerInfo.appendChild(speakerName);
-    speakerInfo.appendChild(speakerPosition);
-    speakerInfo.appendChild(document.createElement("br"));
-    speakerInfo.appendChild(speakerDescription);
-
-    speakerElement.appendChild(speakerImage);
-    speakerElement.appendChild(speakerInfo);
-
-    speakersContainer.appendChild(speakerElement);
+    showMoreButton.style.display = "none";
+    partnerSection.style.display = "flex";
+    footer.style.display = "flex";
   }
+
+  speakersContainer.innerHTML = speakersHTML;
 }
 
-function showMoreSpeakers() {
-  visibleSpeakers = speakersData.length; // Show all speakers
-  renderSpeakers();
-  showMoreButton.style.display = "none"; // Hide the "Show More" button
+function showAllSpeakers() {
+  const speakersContainer = document.querySelector(".speakers");
+  const partnerSection = document.querySelector(".partner");
+  const footer = document.querySelector("footer");
+  const showMoreButton = document.getElementById("showMoreButton");
+
+  let speakersHTML = "";
+
+  for (let i = 0; i < speakersData.length; i++) {
+    speakersHTML += generateSpeakerHTML(speakersData[i]);
+  }
+
+  speakersContainer.innerHTML = speakersHTML;
+  showMoreButton.style.display = "none";
+  partnerSection.style.display = "flex";
+  footer.style.display = "flex";
 }
 
-renderSpeakers();
+window.addEventListener("resize", displaySpeakers);
+displaySpeakers();
 
-if (window.innerWidth < 768) {
-  showMoreButton.addEventListener("click", showMoreSpeakers);
-}
+const showMoreButton = document.getElementById("showMoreButton");
+showMoreButton.addEventListener("click", showAllSpeakers);
+// dynamic year in the footer
+const currentYearElement = document.getElementById("currentYear");
+const currentYear = new Date().getFullYear();
+currentYearElement.textContent = currentYear;

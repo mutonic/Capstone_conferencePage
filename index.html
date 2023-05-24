@@ -41,15 +41,17 @@
 
     <nav class="navbar">
       <div class="logo">
-        <h1>Logo</h1>
+        <a href="./index.html"
+          ><img src="/assets/images/insightsummit_logo.png" alt=""
+        /></a>
       </div>
       <ul class="navbar-links">
-        <li class="nav-link">About</li>
-        <li class="nav-link">Program</li>
-        <li class="nav-link">Join</li>
-        <li class="nav-link">Sponsor</li>
-        <li class="nav-link">News</li>
-        <li class="nav-link camp-link">CC Campaign</li>
+        <a href=""><li class="nav-link">About</li></a>
+        <a href=""><li class="nav-link">Program</li></a>
+        <a href=""><li class="nav-link">Join</li></a>
+        <a href=""><li class="nav-link">Sponsor</li></a>
+        <a href=""><li class="nav-link">News</li></a>
+        <a href=""><li class="nav-link camp-link">CC Campaign</li></a>
       </ul>
     </nav>
     <!-----------------------Main Content------------------->
@@ -58,6 +60,17 @@
         <div class="hamburger">
           <span class="material-symbols-outlined"> menu </span>
         </div>
+        <nav class="mobile-nav">
+          <button class="close-menu" id="hamburger">
+            <span class="material-symbols-outlined"> close </span>
+          </button>
+          <a href="">About</a>
+        <a href="">Program</a>
+        <a href="">Join</a>
+        <a href="">Sponsor</a>
+        <a href="">News</a>
+        <a href="">CC Campaign</a>
+        </nav>
         <div class="hero">
           <div class="hero-title">
             <h2>"Hello! Sharing World"</h2>
@@ -65,14 +78,15 @@
           </div>
           <div class="hero-paragraph">
             <p>
-              A joyful celebration believing in the value of data-driven
-              approaches and knowledge sharing, creating a positive change with
-              experts from around the globe is taking place soon.
+              Join us at Insight Summit, a dynamic data science summit that
+              brings together global experts for a joyful celebration of
+              data-driven approaches and knowledge sharing. Together, we'll
+              create positive change and unlock the power of insights.
             </p>
           </div>
           <div class="hero-time">
             <h2>2023.10.19(THU) ~ 20(FRI)</h2>
-            <p>@Data Center, Tech Hub, and more</p>
+            <p>@Insight Lab, Kigali Rwanda</p>
           </div>
         </div>
       </section>
@@ -92,8 +106,7 @@
             </div>
             <h4>Presentation</h4>
             <p>
-              Listen to the speakers from various countries about the message of
-              sharing and opening.
+              Inspiring talks by renowned data scientists and experts on the latest trends in data science
             </p>
           </article>
           <article class="program-container">
@@ -102,10 +115,9 @@
                 <img src="/assets/images/program_icon_02.png" alt="" />
               </figure>
             </div>
-            <h4>CC Exhibition</h4>
+            <h4>Panel Discussions</h4>
             <p>
-              Listen to the speakers from various countries about the message of
-              sharing and opening.
+              Engaging discussions on machine learning, AI, big data, and data ethics.
             </p>
           </article>
           <article class="program-container">
@@ -114,10 +126,9 @@
                 <img src="/assets/images/program_icon_03.png" alt="" />
               </figure>
             </div>
-            <h4>Forum</h4>
+            <h4>Workshops</h4>
             <p>
-              Listen to the speakers from various countries about the message of
-              sharing and opening.
+              Hands-on sessions to enhance data science skills led by experienced professionals
             </p>
           </article>
           <article class="program-container">
@@ -126,10 +137,9 @@
                 <img src="/assets/images/program_icon_04.png" alt="" />
               </figure>
             </div>
-            <h4>Workshop</h4>
+            <h4>Poster Sessions</h4>
             <p>
-              Listen to the speakers from various countries about the message of
-              sharing and opening.
+              Showcasing innovative projects and research findings through interactive posters.
             </p>
           </article>
           <article class="program-container">
@@ -138,16 +148,15 @@
                 <img src="/assets/images/program_icon_05.png" alt="" />
               </figure>
             </div>
-            <h4>CC Ignite</h4>
+            <h4>Networking</h4>
             <p>
-              Listen to the speakers from various countries about the message of
-              sharing and opening.
+              Connect with data scientists, industry leaders, and recruiters for valuable connections and collaborations.
             </p>
           </article>
         </div>
 
         <div class="join-btn">
-          <button>Join CC Global Summit 2023</button>
+          <button>Join Insight Summit 2023</button>
         </div>
         <div class="more-program">
           <a href="">See the whole program</a>
@@ -161,6 +170,32 @@
         <div class="speakers" id="speakers"></div>
         <button id="showMoreButton">Show More</button>
       </section>
+      <section class="partner">
+        <div class="partner-title">
+          <h4>Partner</h4>
+        </div>
+        <div class="line-program">
+          <span class="material-symbols-outlined"> horizontal_rule </span>
+        </div>
+        <div class="partner-logo">
+          <a href=""><img src="./assets/images/mozila_logo.png" alt="" /></a>
+          <a href=""><img src="./assets/images/google_logo&.png" alt="" /></a>
+          <a href=""><img src="./assets/images/naver_logo.png" alt="" /></a>
+          <a href=""><img src="./assets/images/daum_logo.svg" alt="" /></a>
+          <a href=""><img src="./assets/images/airbnb_logo.png" alt="" /></a>
+        </div>
+      </section>
+      <footer>
+        <div class="logo-footer">
+          <img src="./assets/images/insightsummit_logo.png" alt="" />
+        </div>
+        <div class="footer-text">
+          <p>
+            <span id="currentYear"></span> Data insight.© Some Rights Reserved
+          </p>
+          <p></p>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
