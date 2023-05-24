@@ -400,7 +400,7 @@ footer {
 
 .images {
   width: 40vw;
-  height: 50vh;
+  min-height: 30vh;
   background-position: center;
   background-size: cover;
   background-image: url(/assets/images/summit-1.jpg);
@@ -409,7 +409,7 @@ footer {
 
 .images-one {
   width: 40vw;
-  height: 50vh;
+  min-height: 30vh;
   background-position: center;
   background-size: cover;
   background-image: url(/assets/images/summit-2.jpg);
@@ -418,7 +418,7 @@ footer {
 
 .images-overlay {
   width: 40vw;
-  height: 50vh;
+  min-height: 30vh;
   background-color: rgba(238, 85, 69, 0.7);
   display: flex;
   flex-direction: column;
@@ -523,7 +523,7 @@ footer {
     vertical-align: middle;
     width: 100%;
     margin: 0 auto;
-    padding-right: 10%;
+    padding-right: 20%;
   }
 
   .login-header a {
@@ -568,12 +568,14 @@ footer {
 
   .hero-title {
     width: 78%;
+    margin-top: 30px;
   }
 
   .hero-title h2 {
     font-size: 28px;
     font-weight: 400;
     color: var(--color-2);
+    display: none;
   }
 
   .hero h1 {
